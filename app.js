@@ -1,5 +1,5 @@
 
-
+/* 
 
 let user="";
 let pass="";
@@ -65,3 +65,145 @@ let Confirpass="";
 
 
 
+ */
+
+
+// creamos clase producto
+class Producto {
+   constructor(idProducto, descripcion, precio, iva) {
+      this.idProducto = parseInt(idProducto);
+      this.descripcion = descripcion;
+      this.precio = parseFloat(precio);
+      this.iva = parseFloat(iva);
+    
+   
+
+   }
+   sumaIva() {
+      this.precio = this.precio * this.iva;
+   }
+
+  
+
+
+}
+
+
+ function precioFinal(precio,porcentaje) {
+
+  
+   return (precio * porcentaje/100)+precio;
+  }
+
+
+//Declaramos un array de productos para almacenar objetos
+const productos = [];
+
+// alamcenamos los valores
+productos.push(new Producto(1, "LOMO", 520, 1.21));
+productos.push(new Producto(2, "PIZZA", 650, 1.21));
+productos.push(new Producto(3, "CHORI", 650, 1));
+productos.push(new Producto(4, "HAMBURGUESA", 350, 1.21));
+
+// seteamos el iva a todos los precios de los productos
+
+
+
+
+for (const producto1 of productos) {
+   producto1.sumaIva();
+}
+
+
+// declaramos dos variables para que tomen accion para que como maximo pueda equivocarce 3 veces a la hora de seleccionar 
+let contador = 0;
+var intentos = 3;
+let index= -1;
+let descripcionProducto="";
+let cantidad =0;
+let pro="";
+
+
+
+
+ 
+while (contador<intentos) {
+
+   contador++;
+   // preguntamos el producto que quiere comprar , por ahora solo puede comprar solo u tipo de producto jajaja
+   
+    descripcionProducto=prompt("Que producto desea comprar  ? \n LOMO  \n PIZZA \n CHORI \n HAMBURGUESA")
+ 
+
+
+   // verificamos si el producto indicado existe 
+  index=productos.findIndex(pr => pr.descripcion == descripcionProducto);
+
+ console.log(productos);
+
+    
+   if (parseInt(index) == -1) {
+      alert("El producto indicado nop existe ");
+
+   } else {
+
+
+       cantidad = parseInt(prompt("Digame la cantidad del producto Indicado"));
+      // verificamos si la cantidad es un numero 
+      if (cantidad <= 1) {
+         alert("La cantidad debe ser un numero Mayor o igual que 1 (uno)");
+
+
+      } else {
+
+         let tipoPago = parseInt(prompt("Indique la modalidad de pago \n 1 - Efectivo \n 2 - Debito \n 3 - T/Credito"))
+         let Efectivo=0;
+         let porcentaje=0;
+
+        
+         switch (tipoPago) {
+            case 1:
+             Efectivo= parseInt(prompt("Con Cuanto va a pagar"));              
+               break;
+
+               case 2: alert("Compra con Debito tendra un Recargo del 2 %");
+               porcentaje=2;
+               break;
+
+               case 3: alert("Compra con Debito tendra un Recargo del 5 %");
+               porcentaje=5;
+               break;
+
+              
+            default:
+               break;
+         }
+
+ let precio=productos[index].precio ;
+
+
+
+      let precioFinal1=precioFinal(precio,porcentaje) ;
+
+    
+
+      
+
+       alert("El monto total de la compra es $" + precioFinal1*cantidad );
+
+          	
+        confirmacion=confirm("Esta seguro de gerar la compra ?");
+        
+
+        if (confirmacion){
+         alert("Muchas gracias por su compra ");
+         contador=3;
+        } else {
+       alert("Lamentamos que no se haya decidido en realizar la compra ,  Lo esperamos pronto nuevamente !!");
+        contador=3;
+        }
+
+      }
+   }
+ 
+}
