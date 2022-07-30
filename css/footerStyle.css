@@ -1,0 +1,199 @@
+footer {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Tangerine', serif; }
+    footer .footerClass {
+      /* uso de variables para el color del footer */
+      /* se utiliza maps para obtener la cantidad de columnas del grid */
+      background: linear-gradient(to bottom, #0a0a0a, #2c2c2c);
+      box-shadow: 0 0 15px #0e0d0d;
+      grid-template-columns: repeat(1fr, 1fr, 1fr, 1fr);
+   
+      align-items: center;
+      
+      /* nuestras redes */
+      /*  utilizo mixin para crear algunos atibutos de mi clase footerNuetrasRedes*/
+      /* enlaces de interes */
+      /* datos de contacto */ }
+      footer .footerClass .footerNuetrasRedes {
+        grid-area: footerNuetrasRedesArea;
+        height: 100%;
+        width: 100%;
+        text-align: center; }
+        footer .footerClass .footerNuetrasRedes .h3FooterNuetrasRedes {
+          font-size: 60px;
+          padding: 0px;
+          color: #f0e8ea; }
+        footer .footerClass .footerNuetrasRedes .aFacceboockFooterNuetrasRedes {
+          grid-area: aFacceboockFooterNuetrasRedesArea; }
+          footer .footerClass .footerNuetrasRedes .aFacceboockFooterNuetrasRedes img {
+            width: 50px;
+            height: 50px;
+            padding-right: 2%; }
+        footer .footerClass .footerNuetrasRedes .aInstagramFooterNuetrasRedes {
+          grid-area: aInstagramFooterNuetrasRedesArea; }
+          footer .footerClass .footerNuetrasRedes .aInstagramFooterNuetrasRedes img {
+            width: 50px;
+            height: 50px;
+            padding-right: 2%; }
+        footer .footerClass .footerNuetrasRedes .aTwiteerNuetrasRedes {
+          grid-area: aTwiteerNuetrasRedesArea; }
+          footer .footerClass .footerNuetrasRedes .aTwiteerNuetrasRedes img {
+            width: 50px;
+            height: 50px;
+            padding-right: 2%; }
+      
+        
+      
+      footer .footerClass .footerDatosDeContacto {
+        grid-area: footerDatosDeContactoArea;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(100%, 100%, 100%, 100%, 100%, 100%);
+        grid-template-rows: 40px 1fr ;
+        display: grid;
+        padding-right: 10%;
+        grid-template-areas: "h3FooterDatosDeContactoArea h3FooterDatosDeContactoArea h3FooterDatosDeContactoArea h3FooterDatosDeContactoArea h3FooterDatosDeContactoArea h3FooterDatosDeContactoArea"
+   "imgDireccionArea pDireccionArea imgWhatsappArea pWhatsappArea imgEmalArea pEmalArea"   
+   ; }
+        footer .footerClass .footerDatosDeContacto .imgEmal {
+          grid-area: imgEmalArea;
+          text-align: right;
+        }
+          footer .footerClass .footerDatosDeContacto .imgEmal img {
+            width: 40px;
+            height: 40px; }
+        footer .footerClass .footerDatosDeContacto .pEmal {
+          grid-area: pEmalArea;
+          color: white;
+          text-align: left;
+          
+          font-size: 40px; }
+        footer .footerClass .footerDatosDeContacto .h3FooterDatosDeContacto {
+          grid-area: h3FooterDatosDeContactoArea;
+          font-size: 60px;
+          padding: 0px;
+          color: #f0e8ea;
+          text-align: center; }
+        footer .footerClass .footerDatosDeContacto .imgDireccion {
+          grid-area: imgDireccionArea;
+          text-align: right;
+           }
+          footer .footerClass .footerDatosDeContacto .imgDireccion img {
+            width: 40px;
+            height: 40px; }
+        footer .footerClass .footerDatosDeContacto .pDireccion {
+          grid-area: pDireccionArea;
+          color: white;
+          font-size: 40px;
+          text-align: left;
+          }
+        footer .footerClass .footerDatosDeContacto .imgWhatsapp {
+          grid-area: imgWhatsappArea;
+          text-align: right;
+          }
+          footer .footerClass .footerDatosDeContacto .imgWhatsapp img {
+            width: 40px;
+            height: 40px; }
+        footer .footerClass .footerDatosDeContacto .pWhatsapp {
+          grid-area: pWhatsappArea;
+          color: white;
+          font-size: 20x;
+          text-align: center;
+          margin-top: 5%;
+          text-align: left;
+         
+          font-size: 40px; }
+      footer .footerClass .fotterGoogleMaps {
+        grid-area: fotterGoogleMapsArea;
+        margin-left: 10%;
+        width: 90%;
+        height: 100%; }
+        footer .footerClass .fotterGoogleMaps iframe {
+          width: 100%;
+          height: 100%;
+          position: relative; }
+    @media screen and (max-width: 990px) {
+      footer .footerClass .fotterGoogleMaps {
+        margin-left: 0%;
+        padding-left: 0%;
+        width: 100%;
+        height: 100%; }
+        footer .footerClass .fotterGoogleMaps iframe {
+          width: 100%;
+          height: 100%; }
+      footer .footerClass {
+        /* utilizamos map para traer las columnas para el grid */
+        grid-template-columns: repeat(1fr);
+        grid-template-rows: repeat(1fr, 1fr, 1fr, 1fr, 1fr);
+        grid-template-areas: "footerDatosDeContactoArea"
+   
+   "footerNuetrasRedesArea"
+   "fotterGoogleMapsArea"
+   "fotterGoogleMapsArea"
+   "fotterGoogleMapsArea";
+        font-size: 40px; }
+        footer .footerClass .footerDatosDeContacto {
+          width: 100%;
+          height: 100%;
+          grid-template-columns: repeat(1fr);
+          grid-template-rows: 100px 100px 100px 100px;
+          display: grid;
+          padding-right: 0px;
+          grid-template-areas: "h3FooterDatosDeContactoArea"
+   "imgDireccionArea pDireccionArea"
+   "imgWhatsappArea pWhatsappArea"
+   "imgEmalArea pEmalArea"; }
+          footer .footerClass .footerDatosDeContacto .pDireccion {
+            text-align: left;
+            padding-left: 2%;
+            font-size: 40px;
+            margin-top: 5px; }
+          footer .footerClass .footerDatosDeContacto .imgDireccion {
+            margin: 2%; }
+            footer .footerClass .footerDatosDeContacto .imgDireccion img {
+              width: 30px;
+              height: 30px; }
+          footer .footerClass .footerDatosDeContacto .imgWhatsapp {
+            margin: 2%; }
+            footer .footerClass .footerDatosDeContacto .imgWhatsapp img {
+              width: 30px;
+              height: 30px; }
+          footer .footerClass .footerDatosDeContacto .pWhatsapp {
+            text-align: left;
+            padding-left: 5%;
+            font-size: 40px;
+            margin-top: 2%; }
+          footer .footerClass .footerDatosDeContacto .imgEmal {
+            margin-top: 0px; }
+            footer .footerClass .footerDatosDeContacto .imgEmal img {
+              width: 30px;
+              height: 30px; }
+          footer .footerClass .footerDatosDeContacto .pEmal {
+            text-align: left;
+            padding-left: 5%;
+            font-size: 40px;
+            padding-top: 0px; }
+        
+         
+        footer .footerClass .h3FooterDatosDeContacto {
+          font-size: 60px;
+          text-align: center;
+          padding: 0px;
+          margin-bottom: 100px; }
+        footer .footerClass .h3FooterNuetrasRedes {
+          font-size: 60px;
+          padding: 0px; }
+        footer .footerClass .aFacceboockFooterNuetrasRedes img {
+          width: 50px;
+          height: 50px;
+          padding-right: 2%; }
+        footer .footerClass .aInstagramFooterNuetrasRedes img {
+          width: 50px;
+          height: 50px;
+          padding-right: 2%; }
+        footer .footerClass .aTwiteerNuetrasRedes img {
+          width: 50px;
+          height: 50px;
+          padding-right: 2%; } }

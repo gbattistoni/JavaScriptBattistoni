@@ -1,0 +1,74 @@
+header {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Tangerine', serif; }
+
+    header .headerClass {
+      font-size: 30px;
+      background-color: black; }
+
+      header .headerClass #idLodo {
+        border-radius: 50%;
+      height: 50%;
+    width: 50%; }
+
+      header .headerClass .dropdown-menu {
+        font-family: 'Courier New', Courier, monospace; }
+
+      header .headerClass nav ul li a:hover {
+        background-color: rgba(238, 15, 15, 0.5);
+        
+        transition-duration: 1s;
+        border-radius: 10%; }
+
+
+      header .headerClass #idLodoFacebook {
+        height: 30px;
+        width: 30px; }
+
+        header .headerClass #idLodoFacebook :hover {
+          height: 40px;
+          width: 40px;
+          transition-duration: 1s; }
+
+      header .headerClass #idLodoInstagram {
+        height: 30px;
+        width: 30px; }
+
+        header .headerClass #idLodoInstagram :hover {
+          height: 40px;
+          width: 40px;
+          transition-duration: 1s; }
+
+      header .headerClass #idLodoWhatsapp {
+        height: 30px;
+        width: 30px; }
+
+        header .headerClass #idLodoWhatsapp :hover {
+          height: 40px;
+          width: 40px;
+          transition-duration: 1s; }
+
+         
+    @media screen and (max-width: 990px) {
+      header nav ul li {
+        border-radius: 1%;
+        text-align: center;
+        margin-left: 30%; } }
+  
+  /* variabbles color fondo footer main */
+
+    .headerCarrito img{
+        border-radius: 50%;
+    }
+  
+
+    .carrucel{
+
+      height: 250px;
+      width: 100%;
+      position: absolute;
+      
+
+    }
