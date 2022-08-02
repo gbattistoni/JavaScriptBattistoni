@@ -96,7 +96,7 @@ class Producto {
   }
 
 
-//Declaramos un array de productos para almacenar objetos
+//Declaramos un array de productos para almacenar objetos esto es para el segundo entregable
 const productos = [];
 
 // alamcenamos los valores
