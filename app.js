@@ -104,6 +104,7 @@ productos.push(new Producto(1, "LOMO", 520, 1.21));
 productos.push(new Producto(2, "PIZZA", 650, 1.21));
 productos.push(new Producto(3, "CHORI", 650, 1));
 productos.push(new Producto(4, "HAMBURGUESA", 350, 1.21));
+//
 
 // seteamos el iva a todos los precios de los productos
 
