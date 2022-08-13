@@ -1,4 +1,4 @@
-const tablaDatos=[{
+/* const tablaDatos=[{
     idProducto :1,
     descripcion :"Lomo Ahumado" ,
     precio : 800.00,
@@ -29,4 +29,4 @@ const tablaDatos=[{
 }
 
 ];
-
+ */
