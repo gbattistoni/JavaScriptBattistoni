@@ -15,19 +15,72 @@ class Producto {
 
 
 
-const productos = [];
+let productos = [{
+  "idProducto" :1,
+  "ProductoDes" :"Lomo Ahumado" ,
+  "categoria" : "Lomo",
+  "precio" : 800
+
+},
+{
+  "idProducto" :2,
+  "ProductoDes" :"Lomo ternera" ,
+  "categoria" : "Lomo",
+  "precio" : 1650
+
+},
+{
+  "idProducto" :3,
+  "ProductoDes" :"Piza tomate" ,
+  "categoria" : "Pizza",
+  "precio" : 800
+
+},
+{
+  "idProducto" :4,
+  "ProductoDes" :"Piza especial" ,
+  "categoria" : "Pizza",
+  "precio" : 900
+
+}
+,
+{
+  "idProducto" :5,
+  "ProductoDes" :"Chori ahumado" ,
+  "categoria" : "Chori",
+  "precio" : 750
+
+}
+,
+{
+  "idProducto" :6,
+  "ProductoDes" :"Chori vejetariano" ,
+  "categoria" : "Chori",
+  "precio" : 750
+
+},
+{
+  "idProducto" :7,
+  "ProductoDes" :"Hambuerguesa completa" ,
+  "categoria" : "Hambuerguesa",
+  "precio" : 1150
+
+}
+,
+{
+  "idProducto" :7,
+  "ProductoDes" :"Hambuerguesa Simple" ,
+  "categoria" : "Hambuerguesa",
+  "precio" : 950
+
+}
+]
 
 
-//local
-// alamcenamos los valores
-productos.push(new Producto(1, "Lomo Ahumado", "Lomo", 800));
-productos.push(new Producto(2, "Lomo ternera", "Lomo", 1650));
-productos.push(new Producto(3, "Piza tomate", "Pizza", 800));
-productos.push(new Producto(4, "Piza especial", "Pizza", 900));
-productos.push(new Producto(5, "Chori ahumado", "Chori", 750));
-productos.push(new Producto(6, "Chori vejetariano", "Chori", 750));
-productos.push(new Producto(7, "Hambuerguesa completa", "Hambuerguesa", 1150));
-productos.push(new Producto(8, "Hambuerguesa Simple", "Hambuerguesa", 950));
+
+
+
+
 
 
 //escondemos los combos de las cantidades
@@ -43,37 +96,9 @@ document.getElementById("cantidadHambuerguesaLabel").style.display = "none"; // 
 document.getElementById("generarCompra").style.display = "none"; // show
 
 /* funcion para llenar las  cantidades de los combos  */
-let paso = 0;
 
-function candidades(producto) {
 
- 
-  let listaCantidad = document.getElementById(producto);
 
-  if (paso == 0) {
-
-    
-   // habilitamos el btn para confirmar la agregar al carrito
-
-    optionCantidad=optionCantidad+" <option value=0></option>" 
-    for (let i = 1; i < 11; i++) {
-
-     
-      optionCantidad = optionCantidad + " <option value=" + i + ">" + i + "</option>"
-
-    }
-   
-
-  }
-
-  listaCantidad.innerHTML = optionCantidad;
-
-  document.getElementById(producto).style.display = "block"; // show
-  document.getElementById(producto + "Label").style.display = "block"; // show
-
-  paso = 1;
-
-}
 
 let precioFinal = 0;
 
@@ -81,11 +106,10 @@ let precioFinal = 0;
 
 function obtenerPrecio(productoCantidad, produto) {
 
-  //let listaCantidad= document.getElementById(productoCantidad);
+
   let idProducto = document.getElementById(produto).value;
   let cantidad = document.getElementById(productoCantidad).value;
-  /* let lista=this.options[listaProducto.selectedIndex];
-  let valor =lista.value; */
+
 
   let lista = productos.filter(cat => cat.idProducto == idProducto);
   let precio = lista[0].precio;
@@ -104,7 +128,10 @@ function obtenerPrecio(productoCantidad, produto) {
 // funcion para agregar la carrito  , antes de cargar indica el monto total por la comra de los productos
 
 function agregarCarrito (){
- alert(" Precio total de la compra $" + precioFinal);
+  /* alert(" Precio total de la compra $" + precioFinal); */
+  localStorage.setItem('precioFinal',precioFinal)
+
+  alert( "El precio final de su compra es : "+localStorage.getItem('precioFinal') )
 
 }
 
@@ -185,11 +212,7 @@ listaHambuerguesa.innerHTML = optionHambuerguesa;
 
 
 
-ambuerguesa; 
 
 
-
-
- 
 
  

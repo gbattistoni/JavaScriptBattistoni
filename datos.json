@@ -1,0 +1,64 @@
+
+[{
+    "idProducto" :1,
+    "ProductoDes" :"Lomo Ahumado" ,
+    "categoria" : "Lomo",
+    "precio" : 800
+
+},
+{
+    "idProducto" :2,
+    "ProductoDes" :"Lomo ternera" ,
+    "categoria" : "Lomo",
+    "precio" : 1650
+
+},
+{
+    "idProducto" :3,
+    "ProductoDes" :"Piza tomate" ,
+    "categoria" : "Pizza",
+    "precio" : 800
+
+},
+{
+    "idProducto" :4,
+    "ProductoDes" :"Piza especial" ,
+    "categoria" : "Pizza",
+    "precio" : 900
+
+}
+,
+{
+    "idProducto" :5,
+    "ProductoDes" :"Chori ahumado" ,
+    "categoria" : "Chori",
+    "precio" : 750
+
+}
+,
+{
+    "idProducto" :6,
+    "ProductoDes" :"Chori vejetariano" ,
+    "categoria" : "Chori",
+    "precio" : 750
+
+},
+{
+    "idProducto" :7,
+    "ProductoDes" :"Hambuerguesa completa" ,
+    "categoria" : "Hambuerguesa",
+    "precio" : 1150
+
+}
+,
+{
+    "idProducto" :7,
+    "ProductoDes" :"Hambuerguesa Simple" ,
+    "categoria" : "Hambuerguesa",
+    "precio" : 950
+
+}
+]
+
+
+
