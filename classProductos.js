@@ -117,8 +117,16 @@ function obtenerPrecio(productoCantidad, produto) {
 
   precioFinal = precioFinal + preciototal;
 
- alert(" precio unitario del producto es $" + precio + " por la cantidad seleccionada es $" + preciototal )
+/*  alert(" precio unitario del producto es $" + precio + " por la cantidad seleccionada es $" + preciototal )
+ */
 
+ Swal.fire({
+  position: 'top-end',
+  icon: 'success',
+  title: " precio unitario del producto es $" + precio + " por la cantidad seleccionada es $" + preciototal ,
+  showConfirmButton: false,
+  timer: 4000
+})
  
   document.getElementById("generarCompra").style.display = "block"; // show
 
@@ -132,7 +140,41 @@ function agregarCarrito (){
   /* alert(" Precio total de la compra $" + precioFinal); */
   localStorage.setItem('precioFinal',precioFinal)
 
- alert( "El precio final de su compra es : "+localStorage.getItem('precioFinal') )
+
+ const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: 'btn btn-success',
+    cancelButton: 'btn btn-danger'
+  },
+  buttonsStyling: false
+})
+
+swalWithBootstrapButtons.fire({
+  title: 'Desea realizar el Pedido',
+  text: "El precio final de su compra es : "+localStorage.getItem('precioFinal') ,
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonText: 'Confirmar',
+  cancelButtonText: 'Cancelar ',
+  reverseButtons: true
+}).then((result) => {
+  if (result.isConfirmed) {
+    swalWithBootstrapButtons.fire(
+      'Pedido generado con Exito ',
+      'dentro de los 40 minutos posteriores , su pedido estara listo para retirarlo ',
+      'success'
+    )
+  } else if (
+    /* Read more about handling dismissals below */
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons.fire(
+      'Cancelado',
+      'Lo esperamos pronto !!',
+      'error'
+    )
+  }
+})
 
 
 }
