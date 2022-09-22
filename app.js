@@ -180,3 +180,7 @@ while (contador<intentos) {
  
 }
  */
+
+let arra =[1,2,3]
+arra[10]='hello';
+alert(arra.length)

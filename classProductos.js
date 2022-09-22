@@ -117,8 +117,9 @@ function obtenerPrecio(productoCantidad, produto) {
 
   precioFinal = precioFinal + preciototal;
 
-  alert(" precio unitario del producto es $" + precio + " por la cantidad seleccionada es $" + preciototal )
+ alert(" precio unitario del producto es $" + precio + " por la cantidad seleccionada es $" + preciototal )
 
+ 
   document.getElementById("generarCompra").style.display = "block"; // show
 
 
@@ -131,7 +132,8 @@ function agregarCarrito (){
   /* alert(" Precio total de la compra $" + precioFinal); */
   localStorage.setItem('precioFinal',precioFinal)
 
-  alert( "El precio final de su compra es : "+localStorage.getItem('precioFinal') )
+ alert( "El precio final de su compra es : "+localStorage.getItem('precioFinal') )
+
 
 }
 
